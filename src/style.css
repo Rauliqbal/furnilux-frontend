@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   body {
+      @apply font-poppins bg-[#fafafa];
+   }
+   .container {
+      @apply md:!max-w-2xl lg:!max-w-7xl px-5;
+   }
+}
+
+@layer components {
+   .btn-primary {
+      @apply px-8 py-3 text-white font-bold text-sm rounded-md bg-green-700 hover:bg-green-900 transition duration-200 ease-out;
+   }
+
+   .btn-secondary {
+      @apply px-8 py-3 text-green-700 font-bold text-sm rounded-md border-2 border-green-800 hover:bg-green-800 hover:text-white transition duration-200 ease-out;
+   }
+}
+
+@layer utilities {
+   .section-title {
+      @apply text-xl md:text-[32px] font-bold text-gray-800;
+   }
+}
