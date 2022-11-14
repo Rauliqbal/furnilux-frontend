@@ -1,7 +1,7 @@
 <template>
    <router-link :to="'/product/' + id" class="flex flex-col overflow-hidden rounded-xl">
       <div>
-         <img class="w-full" :src="'/src/assets/image/' + image" alt="" />
+         <img class="w-full" :src="'https://raw.githubusercontent.com/Rauliqbal/restapi-nodejs/main/images/' + image" alt="" />
       </div>
       <div class="bg-white p-3">
          <h4 class="text-gray-800 text-xl font-semibold hover:underline">{{ title }}</h4>
