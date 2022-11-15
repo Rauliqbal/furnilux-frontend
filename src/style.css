@@ -23,6 +23,6 @@
 
 @layer utilities {
    .section-title {
-      @apply text-xl md:text-[32px] font-bold text-gray-800;
+      @apply text-xl md:text-4xl font-bold text-gray-800;
    }
 }

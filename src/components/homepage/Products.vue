@@ -39,10 +39,10 @@ export default {
                   spaceBetween: 10,
                },
                768: {
-                  slidesPerView: 3,
+                  slidesPerView: 2,
                   spaceBetween: 50,
                },
-               1440: {
+               1024: {
                   slidesPerView: 4,
                   spaceBetween: 30,
                },
