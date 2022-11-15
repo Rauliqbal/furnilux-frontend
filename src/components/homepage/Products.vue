@@ -13,9 +13,7 @@
          :modules="modules"
          class="mySwiper"
       >
-         <swiper-slide class="pb-10" v-for="product in products" :key="product"
-            ><CardProducts :id="product.id" :title="product.title" :image="product.image" :price="product.price" :rating="product.rating" :sold="product.sold"
-         /></swiper-slide>
+         <swiper-slide class="pb-10" v-for="product in products.slice(0, 4)" :key="product"><CardProducts :_id="product._id" :name="product.name" :photo="product.photo" :price="product.price" /></swiper-slide>
       </swiper>
    </div>
 </template>
@@ -26,46 +24,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import CardProducts from "../CardProducts.vue";
 import { Pagination } from "swiper";
+import axios from "axios";
+import { onMounted, ref } from "vue";
 
 export default {
    components: { CardProducts, Swiper, SwiperSlide },
 
    data() {
       return {
-         products: [
-            {
-               id: 1,
-               title: "Mid-Century Chair",
-               image: "mid-century.png",
-               price: 199,
-               rating: 4.5,
-               sold: 200,
-            },
-            {
-               id: 2,
-               title: "Premium Table",
-               image: "premium-table.png",
-               price: 299,
-               rating: 4.7,
-               sold: 200,
-            },
-            {
-               id: 3,
-               title: "Wooden Table",
-               image: "wooden-table.png",
-               price: 199,
-               rating: 4.2,
-               sold: 200,
-            },
-            {
-               id: 4,
-               title: "Lux Sofa",
-               image: "lux-sofa.png",
-               price: 499,
-               rating: 4.8,
-               sold: 200,
-            },
-         ],
          swiperOptions: {
             breakpoints: {
                320: {
@@ -85,8 +51,20 @@ export default {
       };
    },
    setup() {
+      const products = ref([]);
+
+      const getProducts = async () => {
+         let response = await axios.get("https://furnilux-rest-api.herokuapp.com/api/products?limit=4");
+         products.value = response.data;
+      };
+
+      onMounted(() => {
+         getProducts();
+      });
+
       return {
          modules: [Pagination],
+         products,
       };
    },
 };
