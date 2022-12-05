@@ -22,7 +22,7 @@ const categories = ref([]);
 
 async function getCategories() {
    try {
-      const response = await axios.get("https://furnilux-rest-api.herokuapp.com/api/categories");
+      const response = await axios.get("https://restapi-nodejs-production-e712.up.railway.app/api/categories");
       categories.value = response.data;
    } catch (error) {}
 }

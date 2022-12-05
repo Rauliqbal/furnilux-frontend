@@ -13,7 +13,9 @@
          :modules="modules"
          class="mySwiper"
       >
-         <swiper-slide class="pb-10" v-for="product in products.slice(0, 4)" :key="product"><CardProducts :_id="product._id" :name="product.name" :photo="product.photo" :price="product.price" /></swiper-slide>
+         <swiper-slide class="pb-10" v-for="product in products.slice(0, 4)" :key="product._id">
+            <CardProducts :_id="product._id" :name="product.name" :photo="product.photo" :price="product.price" />
+         </swiper-slide>
       </swiper>
    </div>
 </template>
@@ -54,7 +56,7 @@ export default {
       const products = ref([]);
 
       const getProducts = async () => {
-         let response = await axios.get("https://furnilux-rest-api.herokuapp.com/api/products?limit=4");
+         let response = await axios.get("https://restapi-nodejs-production-e712.up.railway.app/api/products");
          products.value = response.data;
       };
 

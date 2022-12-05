@@ -31,6 +31,11 @@ const routes = [
       name: "Categories",
       component: Categories,
    },
+   {
+      path: "/category/:_id",
+      name: "DetailProduct",
+      component: () => import("../views/DetailCategory.vue"),
+   },
 ];
 
 const router = createRouter({

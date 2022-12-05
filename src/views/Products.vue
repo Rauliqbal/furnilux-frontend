@@ -1,5 +1,8 @@
 <template>
-   <div class="min-h-screen">
-      <h1>Products Page</h1>
-   </div>
+   <main class="py-36">
+      <Product />
+   </main>
 </template>
+<script setup>
+import Product from "../components/productpage/Product.vue";
+</script>
