@@ -1,5 +1,8 @@
 <template>
-   <div class="min-h-screen">
-      <h1>Categories Page</h1>
-   </div>
+   <main class="py-36">
+      <Categories />
+   </main>
 </template>
+<script setup>
+import Categories from "../components/categoriespage/Categories.vue";
+</script>
