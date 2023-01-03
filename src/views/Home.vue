@@ -5,8 +5,8 @@
       <Categories class="py-[50px]" />
       <Product class="py-[50px]" />
       <AboutUs class="py-[50px]" />
-      <Testimonial class="py-[50px] hidden md:block" />
-      <Footer class="pt-[50px]" />
+      <Testimonial class="pt-[50px] hidden md:block" />
+      <Footer />
    </main>
 </template>
 

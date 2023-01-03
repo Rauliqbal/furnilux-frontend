@@ -27,7 +27,8 @@ import "swiper/css/pagination";
 import CardProducts from "../CardProducts.vue";
 import { Pagination } from "swiper";
 import axios from "axios";
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
+import dataProduct from "../../api/products.json";
 
 export default {
    components: { CardProducts, Swiper, SwiperSlide },
@@ -50,23 +51,7 @@ export default {
                },
             },
          },
-      };
-   },
-   setup() {
-      const products = ref([]);
-
-      const getProducts = async () => {
-         let response = await axios.get("https://restapi-nodejs-production-e712.up.railway.app/api/products");
-         products.value = response.data;
-      };
-
-      onMounted(() => {
-         getProducts();
-      });
-
-      return {
-         modules: [Pagination],
-         products,
+         products: ref(dataProduct),
       };
    },
 };

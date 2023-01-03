@@ -48,7 +48,7 @@
                   </div>
                </div>
             </div>
-            <h6 class="text-sm md:text-base text-gray-500 text-center pb-10">Copyright 2022 • All rights reserved</h6>
+            <h6 class="text-sm md:text-base text-gray-500 text-center pb-10">Copyright {{ date }} • All rights reserved</h6>
          </div>
       </div>
    </div>
@@ -56,20 +56,10 @@
 
 <script setup>
 import logo from "../assets/image/logo.svg";
-import axios from "axios";
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
+import dataCategories from "../api/categories.json";
 
-const categories = ref([]);
-async function getCategories() {
-   try {
-      const response = await axios.get("https://furnilux-rest-api.herokuapp.com/api/categories");
-      categories.value = response.data;
-   } catch (err) {}
-}
-onMounted(() => {
-   getCategories();
-});
-
+const categories = ref(dataCategories);
 const supports = [
    {
       name: "contact us",
@@ -84,7 +74,6 @@ const supports = [
       name: "terms & conditions",
    },
 ];
-
 const address = [
    {
       name: "support@furnilux",
@@ -96,4 +85,6 @@ const address = [
       name: "Cikarang Barat, Kab.Bekasi, Jawa Barat",
    },
 ];
+
+const date = new Date().getFullYear();
 </script>

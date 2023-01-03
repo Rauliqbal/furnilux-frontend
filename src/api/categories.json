@@ -1,0 +1,47 @@
+[
+   {
+      "_id": "6371be7cf4c8c38687640d30",
+      "name": "living room",
+      "products_count": 4,
+      "photo": "livingroom.png",
+      "createdAt": { "$date": { "$numberLong": "1668398716766" } },
+      "updatedAt": { "$date": { "$numberLong": "1668398716766" } },
+      "__v": 0
+   },
+   {
+      "_id": "6371bf75f4c8c38687640d3c",
+      "name": "bedroom",
+      "products_count": 2,
+      "photo": "bedroom.png",
+      "createdAt": { "$date": { "$numberLong": "1668398965337" } },
+      "updatedAt": { "$date": { "$numberLong": "1668398965337" } },
+      "__v": 0
+   },
+   {
+      "_id": "6371bf75f4c8c38687640d3c",
+      "name": "bedroom",
+      "products_count": 2,
+      "photo": "bedroom.png",
+      "createdAt": { "$date": { "$numberLong": "1668398965337" } },
+      "updatedAt": { "$date": { "$numberLong": "1668398965337" } },
+      "__v": 0
+   },
+   {
+      "_id": "6371bfb0f4c8c38687640d3f",
+      "name": "bathroom",
+      "products_count": 1,
+      "photo": "bathroom.png",
+      "createdAt": { "$date": { "$numberLong": "1668399024102" } },
+      "updatedAt": { "$date": { "$numberLong": "1668399024102" } },
+      "__v": 0
+   },
+   {
+      "_id": "6371bfd9f4c8c38687640d41",
+      "name": "kitchen",
+      "products_count": 1,
+      "photo": "kitchen.png",
+      "createdAt": { "$date": { "$numberLong": "1668399065605" } },
+      "updatedAt": { "$date": { "$numberLong": "1668399065605" } },
+      "__v": 0
+   }
+]

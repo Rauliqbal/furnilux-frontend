@@ -25,7 +25,7 @@
                            <router-link to="/products" class="text-lg text-slate-500 hover:text-slate-900 transition-all duration-200 ease-out">Products</router-link>
                         </li>
                         <li>
-                           <router-link to="/products" class="text-lg text-slate-500 hover:text-slate-900 transition-all duration-200 ease-out">Categories</router-link>
+                           <router-link to="/categories" class="text-lg text-slate-500 hover:text-slate-900 transition-all duration-200 ease-out">Categories</router-link>
                         </li>
                         <li>
                            <button to="#" class="text-lg text-slate-500 hover:text-slate-900 transition-all duration-200 ease-out">Contact</button>

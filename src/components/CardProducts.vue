@@ -1,5 +1,5 @@
 <template>
-   <router-link :to="'/product/' + _id" class="flex flex-col overflow-hidden rounded-xl">
+   <router-link to="#" class="flex flex-col overflow-hidden rounded-xl">
       <div>
          <img class="w-full" :src="'https://raw.githubusercontent.com/Rauliqbal/restapi-nodejs/main/images/' + photo" alt="" />
       </div>

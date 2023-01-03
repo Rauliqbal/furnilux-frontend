@@ -10,7 +10,7 @@ const routes = [
       name: "Home",
       component: Home,
       meta: {
-         title: "Furnilux Home",
+         title: "Home",
       },
    },
    {
@@ -18,23 +18,17 @@ const routes = [
       name: "Products",
       component: Products,
       meta: {
-         title: "Products",
+         title: "All Products",
       },
    },
-   {
-      path: "/product/:_id",
-      name: "DetailProduct",
-      component: () => import("../views/DetailProduct.vue"),
-   },
+
    {
       path: "/categories",
       name: "Categories",
       component: Categories,
-   },
-   {
-      path: "/category/:_id",
-      name: "DetailProduct",
-      component: () => import("../views/DetailCategory.vue"),
+      meta: {
+         title: "All Categories",
+      },
    },
 ];
 
@@ -44,7 +38,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-   document.title = `${to.meta.title}`;
+   document.title = `Furnilux - ${to.meta.title}`;
    next();
 });
 
